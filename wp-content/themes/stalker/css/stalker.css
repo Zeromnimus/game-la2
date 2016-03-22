@@ -1,0 +1,442 @@
+/* Space out content a bit */
+body {
+  background-color: #3c4452;
+  color: #fff;	
+  /* padding-top: 20px; */
+  /* padding-bottom: 20px; */
+  /* tiled bg image */
+  background: url(../img/bg.png);
+  background-size: 1800px 1600px;
+  background-repeat: repeat;  
+  background-attachment: fixed; /* Фиксируем фон веб-страницы */
+  font-family: "TimesNewRoman",serif;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+    font-size: 10pt;
+    text-shadow: 1px 1px 3px black;
+    text-align: LEFT;
+    color: #acb9d0;  
+}
+
+/* Custom page header */
+.header {
+  /* tiled bg image */
+  background: url(../img/bg-head.png);
+  background-size: 1360px 665px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  
+  min-height: 665px;
+  
+}
+.logo {
+    background: url(../img/logo.png);
+    background-size: 400px 58px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: 1000px;
+    min-height: 145px;
+    background-position-x: 150px;
+    background-position-y: 85px;
+    margin: 0px auto;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  text-align: center;
+  color: #7e8e9b;
+}
+
+/* Customize container */
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: -345px 0px 30px 40px;
+  min-height: 1078px;
+  background: url(../img/bg-row.png);
+  background-size: 1145px 1078px;
+  background-repeat: no-repeat;  
+  background-attachment: scroll; /* Фиксируем фон веб-страницы */  
+  background-position: top center;
+}
+.main-menu {
+    min-height: 150px;
+    background: url(../img/bg-menu.png);
+    background-size: 1330px 150px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+    z-index: 1500;
+    position: absolute;
+    margin: -365px 25px;
+    width: 1330px;
+}
+.main-menu ul {
+    display: block;
+    margin: 0px auto;
+    padding: 75px 385px;	
+}
+
+.extra-menu {
+    position: relative;
+    height: 50px;
+}
+.extra-menu ul {
+    display: block;
+    margin: 15px auto;
+    padding: 145px 440px 0px;	
+}
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/****** Собственные настройки элементов *****/
+.foot-back-img {
+  margin: -130px 0px -30px 50px;
+  min-height: 267px;
+  background: url(../img/bg-footer.png);
+  background-size: 1330px 267px;
+  background-repeat: no-repeat;  
+  background-attachment: scroll; /* Фиксируем фон веб-страницы */  
+  background-position: top center;
+}
+.wings {
+    min-height: 909px;
+    background: url(../img/bg-wing.png);
+    background-size: 1318px 909px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    position: absolute;
+    /* z-index: 1700; */
+    margin: -342px 10px;
+    width: 1380px;
+}
+.empty {
+	
+}
+.l-side {
+    min-height: 363px;
+    background: url(../img/bg-servers.png);
+    background-size: 260px 363px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top right;
+    margin: 50px 0px 0px 70px;	
+    padding-left: 105px;
+    padding-top: 25px;
+    padding-right: 40px;
+}
+.l-b-side {
+    min-height: 539px;
+    background: url(../img/bg-forums.png);
+    background-size: 278px 539px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top right;
+    margin: 137px 0px 0px -52px;
+    position: absolute;
+    z-index: 1660;
+    width: 278px;
+	padding-top: 120px;
+    padding-left: 50px;
+    padding-right: 50px;	
+}
+.l-side > p > a {
+	text-decoration: underline;
+	color: #acb9d0;;
+	float: right;
+	cursor: pointer;
+	display: block;	
+}
+.l-b-side > p > a {
+	text-decoration: underline;
+	color: #acb9d0;;
+	float: left;
+	cursor: pointer;
+	z-index: 1800;
+	display: block;
+}
+/*********************************** */
+.r-side {
+    min-height: 363px;
+    background: url(../img/bg-cabinet.png);
+    background-size: 260px 363px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top left;
+    margin: 50px 0px 0px -4px;	
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 110px;	
+}
+.r-b-side {
+    min-height: 542px;
+    background: url(../img/bg-top-list.png);
+    background-size: 283px 542px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top left;
+    margin: 20px 0px 0px -55px;
+    position: absolute;
+    z-index: 1660;
+    width: 283px;
+    padding-left: 50px;
+    padding-top: 125px;
+    padding-right: 45px;
+    line-height: 1.1em;	
+}
+.r-b-side p {
+	margin: 0 0 8px;
+}
+.r-b-side > ul  > li{
+	list-style-type: none;
+}
+.r-side > p > a {
+	color: #acb9d0;;
+	float: right;
+	cursor: pointer;
+	z-index: 1800;
+	display: block;	
+}
+.r-b-side > p > a {
+	text-decoration: underline;
+	color: #acb9d0;;
+	float: left;
+	cursor: pointer;
+	display: block;
+}
+.padd-news {
+    padding: 5px 5px 5px 5px;
+    width: 525px;
+    max-height: 860px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 125px;
+}
+h4.block-title {
+	font-size: 10pt;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 3px black; /* Параметры тени */
+	text-align: center;
+	color: #D6DAE2 !important;
+	margin-bottom: 20px;
+}
+h4.block-title.servers {
+	/* padding: 20px 0px 0px 0px; */
+}
+
+
+.menu-item > a {
+	color: #acb9d0;
+	cursor: pointer;
+	padding: 10px 5px !important;
+}
+.menu-item > a:focus, .menu-item > a:hover {
+    text-decoration: none;
+    background-color: transparent !important;
+	color: #D6DAE2 !important
+}
+.current-menu-item {
+	text-shadow: 2px 2px 0px #000000;
+}
+
+#menu-header-menu, #menu-header-menu-1  {list-style:none;}
+#menu-header-menu li, #menu-header-menu-1 li {float:left;}
+
+div.padd-news > article > header > h4 {
+	text-align: left;
+}
+
+div.padd-news > article > header > h4 > a {
+    color: #e4e4e4;
+    text-decoration: none;
+    background-image: url(../img/bg-post-title-head.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top left;
+    background-position-x: 0px;
+    background-position-y: 15px;
+    padding: 20px 20px 0px 20px;
+}
+
+div.padd-news > article > p {
+	font-family: Tahoma, "San Serif";
+}
+
+div.padd-news > article > hr.title
+{
+	width: 500px;
+    height: 20px;
+    background: url(../img/bg-post-title-hr.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    border: 0px !important;
+    margin-top: 0px;
+    margin-bottom: 5px;	
+}
+div.padd-news > article > hr.sign
+{
+    width: 491px;
+    height: 2px;
+    background: url(../img/bg-post-sign-hr.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+	border: 0px !important;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+a.more-link {
+	color: #ACB9D0;
+}
+
+/* стилизация скроллбара */
+
+::-webkit-scrollbar-button {
+background-image:url('');
+background-repat:no-repeat;
+width:5px;
+height:0px
+}
+
+::-webkit-scrollbar-track {
+background-color:#ecedee
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color:#6dc0c8;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background-color:#56999f;
+}
+
+::-webkit-resizer{
+background-image:url('');
+background-repeat:no-repeat;
+width:4px;
+height:0px
+}
+
+::-webkit-scrollbar{
+width: 4px;
+}
+
+/* стилизация пагинатора */
+/* pagination */
+.pager
+{
+	clear: both;
+	font-size: 11px;
+	line-height: 13px;
+	padding: 0;
+	position: relative;
+}
+.pager span, .pager a
+{
+	background: #666;
+	color: #FFF;
+	display: block;
+	float: left;
+	font-weight: normal;
+	margin: 2px 2px 2px 0;
+	padding: 6px 9px 5px 9px;
+	text-decoration: none;
+	width: auto;
+}
+.pager a:hover
+{
+	background: #365DA1;
+	color: #FFF;
+}
+.pager .current
+{
+	background: #365DA1;
+	color: #FFF;
+	padding: 6px 9px 5px 9px;
+}
+
+/* формы входа регистрации восстановления паролья */
+.login-box
+{
+    width: 180px;
+    height: 200px;
+    max-height: 200px;
+    border: 0px solid white;
+    text-align: center;	
+}
+/* Responsive: Portrait tablets and up */
+@media (min-width: 768px) {
+  .container {
+    width: 1360px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1360px;
+  }	
+}
+
+@media (min-width: 1200px) {
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
