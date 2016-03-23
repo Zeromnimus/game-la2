@@ -46,6 +46,17 @@ body {
     background-position-y: 85px;
     margin: 0px auto;
 }
+.costume {
+    background: url(../img/costume.png);
+    background-size: 154px 180px;
+    background-repeat: no-repeat;
+    width: 154px;
+    height: 180px;
+    position: absolute;
+    z-index: 0;
+    left: 45%;
+    top: 260px;
+}
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   padding-bottom: 19px;
@@ -118,6 +129,11 @@ body {
   margin-top: 28px;
 }
 
+.cp-menu {
+    list-style-type: none;
+    padding-left: 0px;
+    text-align: left;	
+}
 /****** Собственные настройки элементов *****/
 .foot-back-img {
   margin: -130px 0px -30px 50px;

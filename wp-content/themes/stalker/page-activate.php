@@ -1,51 +1,23 @@
 <?php 
 /*
-Template Name: Activate Users Page
+Template Name: Страница активации
 */ ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-  <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title( '|', true, 'right' ); ?>
-</title>
-
-    <!-- Bootstrap -->
-    <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
-	<link href="<?php echo get_template_directory_uri(); ?>/css/stalker.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<?php wp_head(); ?>
-  </head>
-  <body <?php body_class(); ?>>
-    <div class="container" id="col-center">
-      <div class="header">
-		<div class="logo"></div>
-	  </div>
-	  <!-- start head-menu -->
-	  <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'main-menu' ) ); ?>
-	  <!-- end head-menu -->
-	  <div class="row">
-	    <div class="col-lg-12 wings">
-		<!-- крылья сайта -->
-		</div>		
-	  </div>
+	<?php get_header(); ?>
       <div class="row marketing">
 	    <!-- start l-side template -->
 	    <?php get_sidebar('l-side');?>
 		<!-- end l-side template -->
 		<!-- content block -->
         <div class="col-lg-6 padd-news">
+		  <article <?php post_class('post'); ?> id="post-<?php the_ID(); ?>">
+		    <header>
+			  <h4><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+			</header>
+			<hr class="title">
 			<?php 
 			  
 			if (is_user_logged_in()) { // если юзер залогинен, значит уже активирован ?>
-			<p>Вы уже активированы.</p>
+				<p>Вы уже активированы.</p>
 			<?php } else { // если не залогинен
 
 				$user_id = isset($_GET['user']) ? (int)$_GET['user'] : ''; // возьмем юзер ид
@@ -61,9 +33,9 @@ Template Name: Activate Users Page
 						echo '<p>Данные активации не верны или вы уже активированы.</p>'; // если строки не совпали
 					}
 				}
-			} 
-
-			?>
+			} ?>
+			<hr class="sign">
+		  </article> 
         </div>
 		<!-- start r-side template -->
 		<?php get_sidebar('r-side');?>

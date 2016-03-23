@@ -1,15 +1,17 @@
 var ajaxgo = false; // глобальная переменная, чтобы проверять обрабатывается ли в данный момент другой запрос
 jQuery(document).ready(function(){ // после загрузки DOM
 	var userform = jQuery('.userform'); // пишем в переменную все формы с классом userform
+	
 	function req_go(data, form, options) { // ф-я срабатывающая перед отправкой
 	    if (ajaxgo) { // если какой либо запрос уже был отправлен
 		form.find('.response').html('<p class="error">Необходимо дождаться ответа от предыдущего запроса.</p>'); // в див для ответов напишем ошибку
 		return false; // и ничего не будет делать
 	    }
-            form.find('input[type="submit"]').attr('disabled', 'disabled').val('Подождите..'); // выключаем кнопку и пишем чтоб подождали
+        form.find('input[type="submit"]').attr('disabled', 'disabled').val('Подождите..'); // выключаем кнопку и пишем чтоб подождали
 	    form.find('.response').html(''); // опусташаем див с ответом
 	    ajaxgo = true; // записываем в переменную что аякс запрос ушел
 	}
+	
 	function req_come(data, statusText, xhr, form)  { // ф-я срабатывающая после того как пришел ответ от сервера, внутри data будет json объект с ответом
 		console.log(arguments); // это для дебага
 		if (data.success) { // если все хорошо и ошибок нет
@@ -19,7 +21,9 @@ jQuery(document).ready(function(){ // после загрузки DOM
 		    var response = '<p class="error">'+data.data.message+'</p>'; // пишем ответ в <p> с классом error
 		    form.find('input[type="submit"]').prop('disabled', false).val('Отправить'); // снова включим кнопку
 		}
-		form.find('.response').html(response); // выводим ответ
+		var resp = form.find('.response');
+		resp.css("display","block");
+		resp.html(response); // выводим ответ
 		if (data.data.redirect) window.location.href = data.data.redirect; // если передан redirect, делаем перенаправление
 		ajaxgo = false; // аякс запрос выполнен можно выполнять следующий
 	}
